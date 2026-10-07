@@ -54,11 +54,17 @@ console.log(runtimecheck(movie.runtime))
 console.log(movie.watched)
 // TODO 5: Print each key-value pair
 // console.log("Title:", ...)
+console.log("Title:", movie.title)
 // console.log("Year:", ...)
+console.log("Year:", movie.year)
 // console.log("Director:", ...)
+console.log("Director:", movie.director)
 // console.log("Rating:", ...)
+console.log("Rating:", movie.rating)
 // console.log("Runtime:", ...)
+console.log("Runtime:", movie.runtime)
 // console.log("Watched:", ...)
+console.log("Watched:", movie.watched)
 
 // =================================================================
 // PROBLEM 2 — Build Your Own Object
