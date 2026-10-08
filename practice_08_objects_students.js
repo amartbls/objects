@@ -16,7 +16,7 @@ const students = [
   { name: "ChenZee", grade: 12, gpa: 3.5, isHonors: false },
   { name: "Dakota", grade: 10, gpa: 3.9, isHonors: true },
 ];
-
+console.log(students[0].name)
 // =================================================================
 // PROBLEM 1 — Reading Object Properties
 // =================================================================
@@ -35,7 +35,6 @@ const movie = {
   runtime: 169,
   watched: true,
 };
-
 // TODO 1: Print the movie title
 // console.log(...)
 console.log(movie.title)
@@ -79,12 +78,17 @@ console.log("Watched:", movie.watched)
 
 function createStudent(name, grade, gpa) {
   // TODO: return an object with name, grade, gpa, and isHonors
+  let isHonors = false
+  if(gpa>=3.5){
+    isHonors = true
+  }
+  return { name: name, grade: grade, gpa: gpa, isHonors: isHonors}
 }
 
 // Test your function — uncomment when ready:
-// console.log("\n--- Problem 2 ---");
-// console.log(createStudent("Alex", 11, 3.7));
-// console.log(createStudent("Sam", 10, 2.9));
+console.log("\n--- Problem 2 ---");
+console.log(createStudent("Alex", 11, 3.7));
+console.log(createStudent("Sam", 10, 2.9));
 
 // =================================================================
 // PROBLEM 3 — Searching an Array of Objects
@@ -96,10 +100,10 @@ function createStudent(name, grade, gpa) {
 // Expected output:
 //   findByName(students, "ChenZee") → { name: "ChenZee", grade: 12, gpa: 3.5, isHonors: false }
 //   findByName(students, "Marcus")  → null
-
 function findByName(students, targetName) {
   // TODO: use .find() to search by name
   // Hint: .find() returns undefined if nothing matches — convert that to null using || (or) operator
+  return students.find(targetName)
 }
 
 // Test your function — uncomment when ready:
